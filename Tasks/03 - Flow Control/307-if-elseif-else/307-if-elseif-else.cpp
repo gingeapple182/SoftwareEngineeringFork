@@ -36,15 +36,24 @@ int main()
     {
         cout << "Tank is empty. It needs filling." << endl;
     } 
-    else if (level <= low)                       // check the level
+    else if (level <= 5)                       // check the level
     {
-        cout << "Tank is low and needs filling." << endl;
+        cout << "Danger ZONE." << endl;
     }
-    else if (level < high) 
+    else if (level <= 30) 
     {
-        cout << "Tank has sufficient fuel" << endl;
+        cout << "Low" << endl;
     }
-    else {
-        cout << "Tank is full" << endl;
+    else if (level <= 70)
+    {
+        cout << "Medium" << endl;
+    }
+    else if (level <= 95)
+    {
+        cout << "High ;)" << endl;
+    }
+    else
+    {
+        cout << "Full" << endl;
     }
 }
