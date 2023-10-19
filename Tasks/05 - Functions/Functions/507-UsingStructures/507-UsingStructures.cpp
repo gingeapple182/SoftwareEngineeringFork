@@ -5,14 +5,14 @@ using namespace std;
 struct Point {
     int x;
     int y;
-    float length;
+    float egg;
 };
 
 //Function prototypes
 void displayPoint(Point p);
 float calculateLength(Point p);
 Point flipPoint(Point p);
-
+Point addPoint(Point p);
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
     Point p2;                       //Not initialised
     p2.x = 4;                       //Set the member x to 4
     p2.y = 6;                       //Set the member y to 6
-    p2.length = calculateLength(p2);    //Calculate the length of p2, and set the member length to this value
+    p2.egg = calculateLength(p2);    //Calculate the length of p2, and set the member length to this value
 
     //Display both points
     displayPoint(p1);
@@ -37,16 +37,18 @@ int main()
     cout << endl;
 
     //Fix display precision to 2 decimal places
-    cout.precision(2);
+    cout.precision(3);
     cout.setf(cout.fixed);
     
     //Output the length
-    cout << "The length = " << p3.length << endl;
+    cout << "The length = " << p3.egg << endl;
 
     //Now demonstrate returning a structure
     displayPoint(p3);               //Showing p3
     Point p4 = flipPoint(p3);
     displayPoint(p4);               //Showing p4
+
+
 
 }
 
@@ -70,9 +72,15 @@ float calculateLength(Point p)
 // Return a new structure with the the x and y coordinates swapped
 Point flipPoint(Point p)
 {
-    Point result;
-    result.x = p.y;
-    result.y = p.x;
-    result.length = p.length;
-    return result;
+    Point biscuit;
+    biscuit.x = p.y;
+    biscuit.y = p.x;
+    biscuit.egg = p.egg;
+    return biscuit;
+}
+
+Point addPoint(Point p)
+{
+    Point frog;
+    frog.x = p1.x + p2.x
 }

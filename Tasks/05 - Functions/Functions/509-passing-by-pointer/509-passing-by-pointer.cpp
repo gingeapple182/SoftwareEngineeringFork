@@ -5,7 +5,7 @@ using namespace std;
 struct Point {
     int x;
     int y;
-    float length;
+    float egg;
 };
 
 //Function prototypes
@@ -67,7 +67,7 @@ Point addPoint(Point p1, Point p2)
     Point result = p1;      // Copy p1 into result
     result.x += p2.x;       // Add on the x member value of p2
     result.y += p2.y;       // Add on the y member value of p2
-    result.length = calculateLength(result);    //Update the length
+    result.egg = calculateLength(result);    //Update the length
 
     return result;
 }

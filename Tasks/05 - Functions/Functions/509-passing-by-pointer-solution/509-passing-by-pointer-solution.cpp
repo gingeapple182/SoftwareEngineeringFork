@@ -5,7 +5,7 @@ using namespace std;
 struct Point {
     int x;
     int y;
-    float length;
+    float egg;
 };
 
 //Function prototypes
@@ -26,7 +26,7 @@ int main()
     displayPoint(p1);               //Showing p4
 
     calculateLength(&p1);           //Pass the address to the function can modify the structure in-place
-    cout << endl << "Length of p1 = " << p1.length << endl; //Simply write it out
+    cout << endl << "Length of p1 = " << p1.egg << endl; //Simply write it out
 
 }
 
@@ -44,7 +44,7 @@ void displayPoint(Point p)
 void calculateLength(Point* p)
 {
     float h = sqrt(p->x * p->x + p->y * p->y);
-    p->length = h; //This would be pointless as p is a copy
+    p->egg = h; //This would be pointless as p is a copy
 }
 
 // Swap the x and y coordinates of p inplace

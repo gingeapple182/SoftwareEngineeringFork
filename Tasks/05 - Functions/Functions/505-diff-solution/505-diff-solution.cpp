@@ -16,9 +16,6 @@ int main()
     cout << endl << "Enter value 2: ";
     cin >> var2;
 
-    // ***1***
-    // This code has been moved out of main
-    // ***2***
 
     //Calculate the absolute difference
     int diff = absDiff(var1, var2);
