@@ -1,9 +1,8 @@
 #include <iostream>
 using namespace std;
 
-//Function prototypes
 int sub(int u, int v);
-
+int absDiff(int u, int v);
 
 int main()
 {
@@ -15,24 +14,7 @@ int main()
     cout << endl << "Enter value 2: ";
     cin >> var2;
 
-
-    // ***1***
-    // create variables to hold the reslts of the calculation
-    int diff = 0;
-
-    // Calculate the difference
-    if (var1 >= var2)               // check which variable is larger - also this covers the case where they are the same
-    {
-        diff = sub(var1, var2);     // do the subtraction
-    }
-    else
-    {
-        diff = sub(var2, var1);     // do the subtraction
-    }
-    // ***2***
-    
-
-    //int diff = absDiff(var1, var2);
+    int diff = absDiff(var1, var2);
 
     // print out the results
     cout << "Absolute diff = " << diff << endl;
@@ -44,4 +26,21 @@ int sub(int u, int v)
 {
     int y = u - v;
     return y;
+}
+
+int absDiff(int u, int v)
+{
+// create variables to hold the reslts of the calculation
+    int diff = 0;
+
+    // Calculate the difference
+    if (u >= v)               // check which variable is larger - also this covers the case where they are the same
+    {
+        diff = sub(u, v);     // do the subtraction
+    }
+    else
+    {
+        diff = sub(u, v);     // do the subtraction
+    }
+    return diff;
 }
