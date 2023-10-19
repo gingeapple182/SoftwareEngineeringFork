@@ -12,16 +12,16 @@ struct Point {
 void displayPoint(Point p);
 float calculateLength(Point p);
 Point flipPoint(Point p);
-Point addPoint(Point p);
+Point addPoint(Point p1, Point p2);
 
 int main()
 {
     //Create two variables of type Point
-    Point p1 = { 3, 4, 5.0f };      //Initialised inline
+    Point p1 = { 3, 4, 5.0f };      //Initialised 
     Point p2;                       //Not initialised
-    p2.x = 4;                       //Set the member x to 4
-    p2.y = 6;                       //Set the member y to 6
-    p2.egg = calculateLength(p2);    //Calculate the length of p2, and set the member length to this value
+    p2.x = 4;                       //Set x to 4
+    p2.y = 6;                       //Set y to 6
+    p2.egg = calculateLength(p2);    //Calculate the length of p2, and set the member egg to this value
 
     //Display both points
     displayPoint(p1);
@@ -44,12 +44,9 @@ int main()
     cout << "The length = " << p3.egg << endl;
 
     //Now demonstrate returning a structure
-    displayPoint(p3);               //Showing p3
+    displayPoint(p3);               //Show p3
     Point p4 = flipPoint(p3);
-    displayPoint(p4);               //Showing p4
-
-
-
+    displayPoint(p4);               //Show p4
 }
 
 
@@ -69,7 +66,7 @@ float calculateLength(Point p)
     return h;
 }
 
-// Return a new structure with the the x and y coordinates swapped
+// Flip x and y
 Point flipPoint(Point p)
 {
     Point biscuit;
@@ -79,8 +76,12 @@ Point flipPoint(Point p)
     return biscuit;
 }
 
-Point addPoint(Point p)
+Point addPoint(Point p1, Point p2)
 {
-    Point frog;
-    frog.x = p1.x + p2.x
+    Point frog = p1;
+    frog.x += p2.x;
+    frog.y += p2.y;
+    frog.egg += calculateLength(frog);
+
+    return frog;
 }
