@@ -17,8 +17,7 @@ Point addPoint(Point p1, Point p2);
 
 int main()
 {
-    //Create two variables of type Point
-    Point p1 = { 3, 4, 5.0f };      //Initialised inline
+    Point p1 = { 3, 4, 5.0f };     
 
     //Now demonstrate returning a structure
     displayPoint(p1);               //Showing p1
@@ -50,16 +49,15 @@ void calculateLength(Point& p)
     p.egg = h; //This would be pointless as p is a copy
 }
 
-// Swap the x and y coordinates of p inplace
-void flipPoint(Point& p)
+void flipPoint(Point p)
 {
     //Note that p is the address of a structure in memory
     //
     // De-reference each member using the -> operator when using a pointer
     //
-    int prevX = p.x;   //Keep a copy of the previous x member value
-    p.x = p.y;        //Update x
-    p.y = prevX;       //Update y
+    int prevX = p->x;   //Keep a copy of the previous x member value
+    p->x = p->y;        //Update x
+    p->y = prevX;       //Update y
 
     //No need to return anything as we've modified the original!
 }
