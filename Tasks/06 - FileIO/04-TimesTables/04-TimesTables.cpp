@@ -5,22 +5,21 @@ using namespace std;
 
 int main()
 {
-	ofstream outputStream;
-	outputStream.open("eggplant.txt");
+	ofstream sendToTheFrench;
+	sendToTheFrench.open("eggplant.txt");
 
-	if (outputStream.is_open() == false) {
-		cerr << "Cannot create the file" << endl;
+	if (sendToTheFrench.is_open() == false) {
+		cerr << "Cannot create the file you twit" << endl;
 		return -1;
 	}
 
-
 	for (unsigned int r = 2; r <= 12; r++) {
 		for (unsigned int c = 2; c <= 12; c++) {
-			outputStream << r * c << "\t";
+			sendToTheFrench << r * c << "\t";
 		}
-		outputStream << endl;
+		sendToTheFrench << endl;
 	}
-	outputStream << endl;
+	sendToTheFrench << endl;
 
 	return 0;
 }
