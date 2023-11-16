@@ -47,6 +47,12 @@ int main()
     // Store it in the integer variable code
     // Calculate the next value (code + 1)
     // Write out the new module string (correct answer is COMP1001).
+    for (unsigned int e = 0; e < 2; e++) {
+        inputStream >> nextWord;
+    }
+    inputStream >> code;
+
+    cout << "Subject code is " << code << endl;
 
     // (iii) Close
     inputStream.close();
